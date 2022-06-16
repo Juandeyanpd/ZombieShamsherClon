@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Matar))]
 public class Movement : MonoBehaviour
 {
     public float velocidadDeMovimiento;
