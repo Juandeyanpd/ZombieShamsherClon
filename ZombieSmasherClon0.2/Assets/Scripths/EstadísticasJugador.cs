@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EstadísticasJugador : MonoBehaviour
 {
-    public int healthMax;
+    public int healthMax = 10;
     public int helthCurrent;
 
     private void Start()

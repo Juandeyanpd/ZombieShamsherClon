@@ -10,16 +10,5 @@ public class InteraccionesJugador : MonoBehaviour
     public EstadísticasJugador EstadoDelJugador;
 
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Enemy" && Input.GetKeyDown("Fire1"))
-        {
-            other.gameObject.SetActive(false);
-        }
-        if(other.tag == "Human" && Input.GetKeyDown("Fire1"))
-        {
-            other.gameObject.SetActive(false);
-            //SceneManager.LoadScene
-        }
-    }
+    
 }
