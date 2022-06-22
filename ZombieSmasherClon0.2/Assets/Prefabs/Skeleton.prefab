@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -4997985390969171361, guid: 8656ca1d19be30943999423f8e48412e,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidadDeMovimiento: 6
   puntosDeMovimiento:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  distanciaMinima: 0.67
+  - {fileID: 4912002442857081195, guid: fd4d997b0fdddf64faa9438ab8a1eca7, type: 3}
+  - {fileID: 7906555551657271230, guid: c3a4469b3c04d3044bd7eb3b59f8f18f, type: 3}
+  - {fileID: 2585797028746680704, guid: 845d5544be7d9d2479c0f601850e5bf1, type: 3}
+  distanciaMinima: 0.9

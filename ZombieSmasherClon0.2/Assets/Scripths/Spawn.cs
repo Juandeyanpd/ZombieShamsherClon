@@ -28,6 +28,5 @@ public class Spawn : MonoBehaviour
 
         GameObject enemie = Instantiate(prefabs[Random.Range(0, prefabs.Length)],spawnPosition, gameObject.transform.rotation);
 
-        prefabs.Find("WhiteSkeleton");
     }
 }
