@@ -5,9 +5,8 @@ using UnityEngine;
 public class Vida : MonoBehaviour
 {
     public GameObject[] hearts;
-    private int life;
+    public int life;
 
-    public Animator animator;
 
     void Start()
     {
@@ -19,18 +18,15 @@ public class Vida : MonoBehaviour
 
         if(life < 1)
         {
-            Destroy(hearts[0].gameObject);
-            animator.Play("Hit");
+            hearts[0].SetActive(false);
         }
         else if(life < 2)
         {
-            Destroy(hearts[1].gameObject);
-            animator.Play("Hit");
+            hearts[1].SetActive(false);
         }
         else if(life < 3)
         {
-            Destroy(hearts[2].gameObject);
-            animator.Play("Hit");
+            hearts[2].SetActive(false);
         }
     }
 
@@ -38,5 +34,13 @@ public class Vida : MonoBehaviour
     {
         life--;
         Checklife();
+    }
+
+    public void RestartScene()
+    {
+        if(life < 1)
+        {
+
+        }
     }
 }

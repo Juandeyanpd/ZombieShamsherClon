@@ -13,11 +13,15 @@ public class Movement : MonoBehaviour
 
     private int siguientePaso = 0;
 
+    public Vida vida;
+
     //Control visual de personaje
     private SpriteRenderer SpriteRenderer;
     private void Start()
     {
         SpriteRenderer = GetComponent<SpriteRenderer>();
+        vida = FindObjectOfType<Vida>();
+
         Girar();
     }
 
@@ -58,6 +62,7 @@ public class Movement : MonoBehaviour
         if(transform.tag == "Enemy" && collision)
         {
             Destroy(gameObject);
+            vida.PlayerDamaged();
         }
     }
 
