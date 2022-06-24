@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2160076160056246787}
   m_Layer: 0
   m_Name: Human
-  m_TagString: Untagged
+  m_TagString: Human
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,6 +137,8 @@ MonoBehaviour:
   puntosDeMovimiento:
   - {fileID: 2160076161288059456}
   distanciaMinima: 0
+  vida: {fileID: 0}
+  isHuman: 1
 --- !u!1 &2160076161288059459
 GameObject:
   m_ObjectHideFlags: 0

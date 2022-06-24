@@ -13,10 +13,15 @@ public class Movement : MonoBehaviour
 
     private int siguientePaso = 0;
 
+    //Quitar vida a jugador
     public Vida vida;
+
+    //Identificar si es enemigo o no
+    public bool isHuman;
 
     //Control visual de personaje
     private SpriteRenderer SpriteRenderer;
+
     private void Start()
     {
         SpriteRenderer = GetComponent<SpriteRenderer>();
@@ -37,6 +42,8 @@ public class Movement : MonoBehaviour
                 siguientePaso = 0;
             }
         }
+
+
     }
 
     private void Girar()
@@ -55,11 +62,21 @@ public class Movement : MonoBehaviour
     private void OnMouseDown()
     {
         Destroy(gameObject);
+
+        /*if(isHuman == false)
+        {
+            Score ==
+        }*/
+
+        if(isHuman == true)
+        {
+            vida.PlayerDamaged(); 
+        }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(transform.tag == "Enemy" && collision)
+        if (transform.tag == "Enemy")
         {
             Destroy(gameObject);
             vida.PlayerDamaged();

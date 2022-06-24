@@ -752,8 +752,8 @@ MonoBehaviour:
   - {fileID: 6016315483225101176, guid: 2db3d3c3362666f4fa84ad6877d5cd05, type: 3}
   - {fileID: 605057372882465949, guid: 80ea1386d5938624d92cf10870c0c6c1, type: 3}
   - {fileID: 3248123353810216745, guid: e107242ba0ba29a47939706f530ba254, type: 3}
-  timeSpawn: 0.1
-  repeatSpawnRate: 0.5
+  timeSpawn: 0.11
+  repeatSpawnRate: 0.11
   xRangeLeft: {fileID: 384618574}
   xRangeRight: {fileID: 464793104}
   yRangeUp: {fileID: 1517524557}

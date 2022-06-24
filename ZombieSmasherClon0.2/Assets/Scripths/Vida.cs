@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Vida : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class Vida : MonoBehaviour
         {
             hearts[2].SetActive(false);
         }
+
+        RestartScene();
     }
 
     public void PlayerDamaged()
@@ -40,7 +43,7 @@ public class Vida : MonoBehaviour
     {
         if(life < 1)
         {
-
+            SceneManager.LoadScene(2);
         }
     }
 }
