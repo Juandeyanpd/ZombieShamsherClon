@@ -1,8 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using System;
 
 public class Movement : MonoBehaviour
 {
@@ -27,21 +25,6 @@ public class Movement : MonoBehaviour
     //Control visual de personaje
     private SpriteRenderer SpriteRenderer;
 
-    //Cronómetro
-    [Header("Reloj")]
-    [Tooltip("Tiempo inicial en segundos")]
-    public int tiempoInicial;
-
-    [Tooltip("Escala del tiempo del reloj")]
-    [Range(-10.0f, 10.0f)]
-    public float escalaDeTiempo = 1;
-
-    private Text myText;
-    private float tiempoDelFrameConTimeScale = 0f;
-    private float tiempoAMostrarEnSegundos = 0f;
-    private float escalaDeTiempoAlPausar, escalaDeTiempoInicial;
-    private bool estaPausado = false;
-
     private void Start()
     {
         SpriteRenderer = GetComponent<SpriteRenderer>();
@@ -62,7 +45,6 @@ public class Movement : MonoBehaviour
                 siguientePaso = 0;
             }
         }
-
 
     }
 
@@ -108,13 +90,4 @@ public class Movement : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void Score()
-    {
-
-    }
-
-    private void Cronometro()
-    {
-
-    }
 }
