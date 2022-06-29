@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6016315483225101183}
   m_Layer: 0
   m_Name: Skeleton
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,7 +128,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1153846, y: 1.8461539}
+  m_Size: {x: 1.5, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &6016315483225101183
 MonoBehaviour:
@@ -148,3 +148,6 @@ MonoBehaviour:
   - {fileID: 7906555551657271230, guid: c3a4469b3c04d3044bd7eb3b59f8f18f, type: 3}
   - {fileID: 2585797028746680704, guid: 845d5544be7d9d2479c0f601850e5bf1, type: 3}
   distanciaMinima: 0.9
+  vida: {fileID: 0}
+  damage: 1
+  isHuman: 0

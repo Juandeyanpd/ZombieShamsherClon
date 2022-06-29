@@ -18,26 +18,30 @@ public class Spawn : MonoBehaviour
     public Transform yRangeDown;
 
     //Cada cierto tiempo aumenta la dificultad
-    private float time = 0;
+    public float fTime;
+    public int curva;
+    public int cantidadEnemigos;
 
     //Text textOfTime;
 
     private void Start()
     {
         // InvokeRepeating("SpawnEnemies", timeSpawn, repeatSpawnRate);
-        SpawnEnemies(10);
+        SpawnEnemies(5);
     }
 
     private void Update()
     {
-        //Aquí colocaré lo del tiempo y los spawns
-        time = time + Time.deltaTime;
-
-        if(time > 10)
+        fTime += Time.deltaTime;
+        //Tiempo real en el juego
+        if(fTime > curva )
         {
-            SpawnEnemies(5);
-            time = 0;
+            SpawnEnemies(cantidadEnemigos);
+            fTime = 0;
+
         }
+       
+        
     }
 
     public void SpawnEnemies(int cantidadPersonajes)

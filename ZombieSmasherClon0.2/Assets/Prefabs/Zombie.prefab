@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3248123353810216747}
   m_Layer: 0
   m_Name: Zombie
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.1538461, y: 1.5384616}
+  m_Size: {x: 1.5, y: 2}
   m_Direction: 0
 --- !u!114 &3248123353810216747
 MonoBehaviour:
@@ -137,6 +137,9 @@ MonoBehaviour:
   puntosDeMovimiento:
   - {fileID: 3248123355096123179}
   distanciaMinima: 0
+  vida: {fileID: 0}
+  damage: 1
+  isHuman: 0
 --- !u!1 &3248123355096123176
 GameObject:
   m_ObjectHideFlags: 0

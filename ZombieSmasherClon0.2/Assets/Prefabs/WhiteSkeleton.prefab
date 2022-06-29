@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 605057372882465951}
   m_Layer: 0
   m_Name: WhiteSkeleton
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.0714285, y: 1.6785715}
+  m_Size: {x: 1.5, y: 2}
   m_Direction: 0
 --- !u!114 &605057372882465951
 MonoBehaviour:
@@ -137,6 +137,9 @@ MonoBehaviour:
   puntosDeMovimiento:
   - {fileID: 605057372907156492}
   distanciaMinima: 0
+  vida: {fileID: 0}
+  damage: 2
+  isHuman: 0
 --- !u!1 &605057372907156493
 GameObject:
   m_ObjectHideFlags: 0

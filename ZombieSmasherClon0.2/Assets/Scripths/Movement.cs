@@ -17,6 +17,8 @@ public class Movement : MonoBehaviour
     [Header("Vida")]
     //Quitar vida a jugador
     public Vida vida;
+    public int damage;
+    private int actualdamage;
 
     [Header("Es Humano?")]
     //Identificar si es enemigo o no
@@ -63,22 +65,24 @@ public class Movement : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Destroy(gameObject);
 
-        /*if(isHuman == false)
+        if (actualdamage >= damage )
         {
-            Score ==
-        }*/
+            Destroy(gameObject);
+        }
 
         if(isHuman == true)
         {
-            vida.PlayerDamaged(); 
+            Destroy(gameObject);
+            vida.PlayerDamaged();
+            
         }
+        actualdamage++;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (transform.tag == "Enemy")
+        if (isHuman == false)
         {
             Destroy(gameObject);
             vida.PlayerDamaged();

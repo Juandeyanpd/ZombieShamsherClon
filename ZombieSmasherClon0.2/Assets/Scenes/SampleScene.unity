@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 74898089}
   - component: {fileID: 74898088}
   m_Layer: 5
-  m_Name: "Text (TMP)(Cron\xF3metro)"
+  m_Name: Text (TMP)(Cronometro)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_text: 00:00
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bd2611b55fa976144b93fb0dc228f3b5, type: 2}
-  m_sharedMaterial: {fileID: -3474962162136814294, guid: bd2611b55fa976144b93fb0dc228f3b5,
+  m_sharedMaterial: {fileID: -2312990288308678169, guid: bd2611b55fa976144b93fb0dc228f3b5,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -515,7 +515,7 @@ MonoBehaviour:
   m_text: 'Score: 00'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5c8817fc68eb9bd46a6d4577b34d714b, type: 2}
-  m_sharedMaterial: {fileID: -6322629023806525939, guid: 5c8817fc68eb9bd46a6d4577b34d714b,
+  m_sharedMaterial: {fileID: -7759871066827059737, guid: 5c8817fc68eb9bd46a6d4577b34d714b,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1023,8 +1023,8 @@ MonoBehaviour:
   - {fileID: 1811848820}
   - {fileID: 712843010}
   life: 0
-  tiempoInicial: 15
-  escalaDeTiempo: 1
+  tiempoInicial: 0
+  escalaDeTiempo: 2
   myText: {fileID: 74898088}
 --- !u!1 &1494164160
 GameObject:
@@ -1084,6 +1084,9 @@ MonoBehaviour:
   xRangeRight: {fileID: 464793104}
   yRangeUp: {fileID: 1517524557}
   yRangeDown: {fileID: 2015208336}
+  fTime: 0
+  curva: 4
+  cantidadEnemigos: 32
 --- !u!1 &1501900191
 GameObject:
   m_ObjectHideFlags: 0

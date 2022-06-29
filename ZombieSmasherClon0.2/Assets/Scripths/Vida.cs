@@ -23,8 +23,8 @@ public class Vida : MonoBehaviour
     [SerializeField] private TMP_Text myText;
     private float tiempoDelFrameConTimeScale = 0f;
     private float tiempoAMostrarEnSegundos = 0f;
-    private float escalaDeTiempoAlPausar, escalaDeTiempoInicial;
-    private bool estaPausado = false;
+    private float escalaDeTiempoInicial;
+
 
     void Start()
     {
@@ -33,16 +33,19 @@ public class Vida : MonoBehaviour
         //Establecer la escala de tiempo original
         escalaDeTiempoInicial = escalaDeTiempo;
 
-        //Get d text component
-        //myText = GetComponent<TM_Text>();
-
         //Inicializamos la variable que acumula los tiempos que tiene cada frame con el tiempo inicial
         tiempoAMostrarEnSegundos = tiempoInicial;
 
         ActualizarReloj(tiempoInicial);
     }
+
     private void Update()
     {
+        //La siguiente variable representa el tiempo de cada frame considerando la escala de tiempo
+        tiempoDelFrameConTimeScale = Time.deltaTime * escalaDeTiempo;
+        //La siguiente variable va acumulando el tiempo transcurrido para luego mostrarlo en el reloj
+        tiempoAMostrarEnSegundos += tiempoDelFrameConTimeScale;
+        ActualizarReloj(tiempoAMostrarEnSegundos);
         
     }
 

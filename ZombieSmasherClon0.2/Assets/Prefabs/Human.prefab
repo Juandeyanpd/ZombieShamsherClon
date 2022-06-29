@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2160076160056246787}
   m_Layer: 0
   m_Name: Human
-  m_TagString: Human
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.92727274, y: 1.5818182}
+  m_Size: {x: 1.5, y: 2}
   m_Direction: 0
 --- !u!114 &2160076160056246787
 MonoBehaviour:
@@ -138,6 +138,7 @@ MonoBehaviour:
   - {fileID: 2160076161288059456}
   distanciaMinima: 0
   vida: {fileID: 0}
+  damage: 1
   isHuman: 1
 --- !u!1 &2160076161288059459
 GameObject:
