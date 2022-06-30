@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.UI;
 
 public class Spawn : MonoBehaviour
 {
@@ -19,10 +18,8 @@ public class Spawn : MonoBehaviour
 
     //Cada cierto tiempo aumenta la dificultad
     public float fTime;
-    public int curva;
-    public int cantidadEnemigos;
-
-    //Text textOfTime;
+    private int curva = 15;
+    private int cantidadEnemigos = 1;
 
     private void Start()
     {
@@ -33,15 +30,44 @@ public class Spawn : MonoBehaviour
     private void Update()
     {
         fTime += Time.deltaTime;
+
         //Tiempo real en el juego
-        if(fTime > curva )
+        if(fTime > curva)
         {
             SpawnEnemies(cantidadEnemigos);
             fTime = 0;
-
+            curva = 10;
+            cantidadEnemigos = 2;
         }
-       
-        
+        if(fTime < curva)
+        {
+            curva = 5;
+            cantidadEnemigos = 3;
+            fTime = 0;
+        }
+        if(fTime < curva)
+        {
+            curva = 2;
+            cantidadEnemigos = 4;
+            fTime = 0;
+        }
+        Debug.Log(curva);
+        Debug.Log(cantidadEnemigos);
+
+        /*if(fTime > curva && curva == 15)
+        {
+            SpawnEnemies(cantidadEnemigos = 2);
+            fTime = 0;
+            curva = 10;
+        }
+        if(fTime > curva && curva == 10)
+        {
+            SpawnEnemies(cantidadEnemigos = 3);
+            fTime = 0;
+            curva = 5;
+        }*/
+
+
     }
 
     public void SpawnEnemies(int cantidadPersonajes)

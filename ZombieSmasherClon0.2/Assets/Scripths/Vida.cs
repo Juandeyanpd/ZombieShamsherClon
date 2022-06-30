@@ -104,8 +104,8 @@ public class Vida : MonoBehaviour
         myText.text = textoDelReloj;
     }
 
-    private void Score()
+    /*private void Score()
     {
 
-    }
+    }*/
 }
