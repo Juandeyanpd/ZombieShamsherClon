@@ -119,7 +119,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.5, y: 2}
+  m_Size: {x: 2, y: 2}
   m_Direction: 0
 --- !u!114 &605057372882465951
 MonoBehaviour:
@@ -140,6 +140,7 @@ MonoBehaviour:
   vida: {fileID: 0}
   damage: 2
   isHuman: 0
+  sonido: {fileID: 5530208729522492792, guid: 14ba3c830bdc0b84d9a943ac90d09280, type: 3}
 --- !u!1 &605057372907156493
 GameObject:
   m_ObjectHideFlags: 0

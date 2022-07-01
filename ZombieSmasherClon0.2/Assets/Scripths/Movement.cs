@@ -24,15 +24,16 @@ public class Movement : MonoBehaviour
     //Identificar si es enemigo o no
     public bool isHuman;
 
-    //Control visual de personaje
-    private SpriteRenderer SpriteRenderer;
+    //Animación
+    public GameObject personaje;
+    public GameObject explosion;
 
     private void Start()
     {
-        SpriteRenderer = GetComponent<SpriteRenderer>();
         vida = FindObjectOfType<Vida>();
 
-        Girar();
+        personaje.SetActive(true);
+        explosion.SetActive(false);
     }
 
     private void Update()
@@ -50,32 +51,27 @@ public class Movement : MonoBehaviour
 
     }
 
-    private void Girar()
-    {
-        if(transform.position.x < puntosDeMovimiento[siguientePaso].position.x)
-        {
-            SpriteRenderer.flipX = true;
-        }
-        else
-        {
-            SpriteRenderer.flipX = false;
-        }
-    }
-
-
     private void OnMouseDown()
     {
 
         if (actualdamage >= damage )
         {
-            Destroy(gameObject);
+
+            personaje.SetActive(false);
+            velocidadDeMovimiento = 0;
+            explosion.SetActive(true);
+            SoundManager.Instance.SetSound(1);
+            Destroy(gameObject, 1f);
         }
 
         if(isHuman == true)
         {
-            Destroy(gameObject);
+            personaje.SetActive(false);
+            velocidadDeMovimiento = 0;
+            explosion.SetActive(true);
+            SoundManager.Instance.SetSound(0);
             vida.PlayerDamaged();
-            
+            Destroy(gameObject, 1f);
         }
         actualdamage++;
     }
